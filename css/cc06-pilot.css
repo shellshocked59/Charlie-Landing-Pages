@@ -1,0 +1,239 @@
+/*
+ * $Revision: 1.0 $
+ *
+ * cc06.css: Chat Now / Contact Us
+ *    - CC06v1: Chat Now / Contact Us, Chat Available
+ *    - CC06v2: Contact Us, No Chat Button
+ *    - CC06v3: Contact Us, No Phone Number
+ *
+ * (c) 1992-2010 Cisco Systems, Inc. All rights reserved.
+ * Terms and Conditions: http://cisco.com/en/US/swassets/sw293/sitewide_important_notices.html
+ */
+
+/*
+*************************************************************
+cc06-pilot - Chat Now / Contact Us
+*************************************************************
+*/
+
+/* General characteristics */
+#let-us-help, .cc06-pilot, .cc06-image, .cc06-content {
+	z-index:10;
+	}
+.cc06-pilot {
+	width:150px;
+	height:38px;
+	position:relative;
+	float:right;
+	top:15px;
+	right:0;
+	}
+.cc06-image {
+	width:150px;
+	height:38px;
+	position:relative;
+	float:right;
+	top:0;
+	right:-1px;
+	}
+.cc06v1-pilot .cc06-image, .cc06v1-pilot .cc06-image.hide, 
+.cc06v2-pilot .cc06-image, .cc06v2-pilot .cc06-image.hide, 
+.cc06v3-pilot .cc06-image, .cc06v3-pilot .cc06-image.hide {
+	background:url('http://www.static-cisco.com/assets/pilot/cc06/contact_us_button_sprite.png') no-repeat 0 -38px;
+	}
+.cc06v1-pilot .cc06-image.show, 
+.cc06v2-pilot .cc06-image.show, 
+.cc06v3-pilot .cc06-image.show {
+	background:url('http://www.static-cisco.com/assets/pilot/cc06/contact_us_button_sprite.png') no-repeat 0 0;
+	}
+
+/* Chat Now content container */
+.cc06-content {
+	width:256px;
+	display:none;
+	float:right;
+	clear:both;
+	margin-top:8px;
+	margin-right:-4px;
+	zoom:1;
+	position:absolute;
+	background:url('http://www.static-cisco.com/assets/pilot/cc06/chat_now_background_module_sprite.png') repeat-y -256px 0;
+	top:49px;
+	right:-2px;
+	}
+.ie6 .cc06-content {
+	background:url('http://www.static-cisco.com/assets/pilot/cc06/chat_now_background_module_sprite.gif') repeat-y -256px 0;
+	top:48px;
+	right:-3px;
+	}
+.cc06-content .cc06-items {
+	margin:-9px 0;
+	}
+.cc06-content .cc06-items div {
+	margin:0 3px;
+	padding:12px 0 12px 60px;
+	border-bottom:1px solid #D2D2D2;
+	border-top:1px solid #F9F9F9;
+	width:190px;
+	position:relative;
+	min-height:23px;
+	line-height: 1.385em;
+	}
+.cc06-content .cc06-items .cc06-first {
+	border-top:none;
+	margin-top:-9px;
+	}
+.cc06-content .cc06-items .singleline {
+	padding-top:16px;
+	padding-bottom:9px;
+	}
+.ie6 .cc06-content .cc06-items .singleline {
+	padding-bottom:16px;
+	}
+.cc06-content .cc06-items .cc06-lasttext {
+	margin-bottom:4px;
+	padding-bottom:18px;
+	}
+.ie6 .cc06-content .cc06-items .cc06-lasttext {
+	padding-bottom:18px;
+	}
+.cc06-content .cc06-items .cc06-lastchat {
+	border-bottom:none;
+	margin-bottom:-9px;
+	padding-left:0;
+	text-align:center;
+	width:250px;
+	}
+
+/* Chat Now text properties */
+.cc06-content a {
+	color:#2871A8;
+	text-decoration:none;
+	}
+.cc06-content a:hover {
+	text-decoration:underline;
+	}
+
+/* Chat Now icons */
+.cc06-content .cc06-icon {
+	width:33px;
+	height:36px;
+	position:absolute;
+	top:11px;
+	left:14px;
+	background:url('http://www.static-cisco.com/assets/pilot/cc06/chat_now_icons_sprite.png') no-repeat 0 0;
+	}
+.ie6 .cc06-content .cc06-icon {
+	background:url('http://www.static-cisco.com/assets/pilot/cc06/chat_now_icons_sprite.gif') no-repeat 0 0;
+	}
+.cc06-content .cc06-icon2 {
+	background-position: -34px 0;
+	}
+.cc06-content .cc06-icon3 {
+	top:6px;
+	background-position: -68px 0;
+	}
+.cc06-content .cc06-icon4 {
+	width:37px;
+	top:6px;
+	background-position: -102px 0;
+	left:12px;
+	}
+
+/* Chat Now rounded corners */
+.cc06-content .top {
+	width:256px;
+	height:13px;
+	position:absolute;
+	top:-13px;
+	left:0;
+	padding:0;
+	background:url('http://www.static-cisco.com/assets/pilot/cc06/chat_now_background_module_sprite.png') no-repeat 0 0;
+	}
+.ie6 .cc06-content .top {
+	background:url('http://www.static-cisco.com/assets/pilot/cc06/chat_now_background_module_sprite.gif') no-repeat 0 0;
+	}
+.cc06-content .bot {
+	width:256px;
+	height:13px;
+	position:absolute;
+	bottom:-13px;
+	left:0;
+	padding:0;
+	background:url('http://www.static-cisco.com/assets/pilot/cc06/chat_now_background_module_sprite.png') no-repeat -512px 0;
+	}
+.ie6 .cc06-content .bot {
+	background:url('http://www.static-cisco.com/assets/pilot/cc06/chat_now_background_module_sprite.gif') no-repeat -512px 0;
+	}
+
+/* Chat Now "call to action" (button) */
+.cc06-cta, .cc06-cta b, .cc06-cta b b {
+	background-image:url('http://www.static-cisco.com/assets/pilot/a00/hero_button_sprite.png');
+	color:#fff !important;
+	text-decoration:none !important;
+	font-weight:bold;
+	font-family:arial;
+	cursor:pointer;
+	outline:none;
+	padding:0;
+	margin:0;
+	line-height:31px;
+	height:31px;
+	display:-moz-inline-box;
+	display:inline-block;
+	font-size:11.25px;
+	-moz-box-align:center;
+	}
+.ie6 .cc06-cta, .ie6 .cc06-cta b, .ie6 .cc06-cta b b {
+	background-image:url('http://www.static-cisco.com/assets/pilot/a00/hero_button_sprite.gif');
+	}
+.cc06-cta {
+	background-position:right -62px;
+	background-repeat:no-repeat;
+	text-decoration:none !important;
+	}
+.cc06-cta b {
+	background-position:0 -31px;
+	background-repeat:no-repeat;
+	}
+.cc06-cta b b {
+	background-position:0 0;
+	background-repeat:repeat-x;
+	margin:0 5px;
+	padding:0 20px;
+	}
+.cc06-cta:hover {
+	background-position: right -155px;
+	background-repeat:no-repeat;
+	}
+.cc06-cta:hover b {
+	background-position:0 -124px;
+	background-repeat:no-repeat;
+	}
+.cc06-cta:hover b b {
+	background-position:0 -93px;
+	background-repeat:repeat-x;
+	}
+	
+/** Taken from page override **/
+.cc06-image {
+	top: 5px !important;
+	right: 2px !important;
+}
+.cc06-content {
+	top:42px !important;
+	right:2px !important;
+	}
+div.cc06-items div {
+	font-size:75%;
+	}
+.cc06-icon1 {
+	top:5px !important;
+	}
+.cc06-first {
+	padding-top:14px !important;
+	}
+.cc06-lasttext {
+	padding-top:16px !important;
+	padding-bottom:6px !important;
+	}

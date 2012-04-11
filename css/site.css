@@ -1,0 +1,1166 @@
+/**
+ * HTML5 ✰ Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ *
+ * Credit is left where credit is due.
+ * Much inspiration was taken from these projects:
+ * - yui.yahooapis.com/2.8.1/build/base/base.css
+ * - camendesign.com/design/
+ * - praegnanz.de/weblog/htmlcssjs-kickstart
+ */
+
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 12px;
+	font-family: Arial;
+	vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+blockquote,q {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: "";
+	content: none;
+}
+
+ins {
+	background-color: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+
+mark {
+	background-color: #ff9;
+	color: #000;
+	font-style: italic;
+	font-weight: bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title],dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+input,select {
+	vertical-align: middle;
+}
+
+/**
+ * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+ */
+body {
+	font: 13px/1.231 sans-serif;
+	*font-size: small;
+} /* Hack retained to preserve specificity */
+select,input,textarea,button {
+	font: 99% sans-serif;
+}
+
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre,code,kbd,samp {
+	font-family: monospace, sans-serif;
+}
+
+/**
+ * Minimal base styles.
+ */
+
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a {
+	outline: none;
+}
+
+a:hover,a:active {
+	outline: none;
+}
+
+ul,ol {
+	margin-left: 2em;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+/* Remove margins for navigation lists */
+nav ul,nav li {
+	margin: 0;
+	list-style: none;
+	list-style-image: none;
+}
+
+small {
+	font-size: 85%;
+}
+
+strong,th {
+	font-weight: bold;
+}
+
+td {
+	vertical-align: top;
+}
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub,sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+pre {
+	/* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	padding: 15px;
+}
+
+	/* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+.ie6 legend,.ie7 legend {
+	margin-left: -7px;
+}
+
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink! */
+::-moz-selection {
+	background: #990000;
+	color: #fff;
+	text-shadow: none;
+}
+
+::selection {
+	background: #990000;
+	color: #fff;
+	text-shadow: none;
+}
+
+/* j.mp/webkit-tap-highlight-color */
+a:link {
+	-webkit-tap-highlight-color: #FF5E99;
+}
+
+/* Make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {
+	width: auto;
+	overflow: visible;
+}
+
+/* Bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img {
+	-ms-interpolation-mode: bicubic;
+}
+
+/**
+ * You might tweak these..
+ */
+body,select,input,textarea {
+	/* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+	color: #444;
+	/* Set your base font here, to apply evenly */
+	/* font-family: Georgia, serif;  */
+}
+
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+h1,h2,h3,h4,h5,h6 {
+	font-weight: bold;
+}
+
+a,a:active,a:visited {
+	color: #0b66b6;
+	text-decoration:none;
+}
+
+a:hover {
+	color: #0b66b6;
+	text-decoration:underline;
+}
+
+/**
+ * Primary styles
+ *
+ * Author: 
+ */
+
+/**
+ * Non-semantic helper classes: please define your styles before this section.
+ */
+
+/* For image replacement */
+.ir {
+	display: block;
+	text-indent: -999em;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	text-align: left;
+	direction: ltr;
+}
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+	visibility: hidden;
+}
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+   j.mp/bestclearfix */
+.clearfix:before,.clearfix:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+
+.clearfix:after {
+	clear: both;
+}
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix {
+	zoom: 1;
+}
+
+a.button, a.button:link, a.button:visited, a.button:active {
+	height: 21px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	*display:inline;
+	zoom:1;
+	padding:0px 5px;
+	line-height: 19px;
+	color:#fff;
+	font-weight:bold;
+	cursor:pointer;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 1px 6px -1px #333;
+	-moz-box-shadow: 0px 1px 6px -1px #333;
+	box-shadow: 0px 1px 6px -1px #333;
+}
+a.button:hover {
+	text-decoration:none;
+}
+a.button-blue {
+	text-shadow: 0px -1px 0px #000000;
+	background: url(../img/buttons/button-blue-bg.png) repeat-x 0px -10px;
+}
+a.button-green {
+	text-shadow: 0px -1px 0px #000000;
+	background: url(../img/buttons/button-green-bg.png) repeat-x 0px -10px;
+}
+a.button-orange {
+	/*text-shadow: 0px -1px 0px #000000;
+	background: url(../img/buttons/button-orange-bg.png) repeat-x 0px -10px;*/
+	text-shadow: 0px  0px 0px #000000;
+	background: url(../img/see_how_sprite.jpg) repeat-x;
+}
+a.button-white,
+a.button-white:link,
+a.button-white:visited,
+a.button-white:active {
+	color: #000;
+}
+a.button-white {
+	/*background: url(../img/buttons/button-white-bg.png) repeat-x 0px -10px;*/
+	background: url(../img/white_sprite.jpg) repeat-x;
+}
+a.button-blue:hover, a.button-green:hover {
+	background-position:0px -70px;
+}
+a.button-white:hover, a.button-white:hover {
+	/*background-position:0px -70px;*/
+}
+a.button span {
+	cursor:pointer;
+}
+/***** END Global Styles *****/
+
+/* Begin fonts */
+/* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 1, 2011 */
+/*
+@font-face {
+    font-family: 'CiscoSansBold';
+    src: url('../fonts/eot/ciscosansbold-webfont.eot');
+	src: local('ò∫'),
+		 url('../fonts/eot/ciscosansbold-webfont.eot?iefix') format('eot'),
+         url('../fonts/woff/ciscosansbold-webfont.woff') format('woff'),
+         url('../fonts/ciscosansbold-webfont.ttf') format('truetype'),
+         url('../fonts/svg/ciscosansbold-webfont.svg#webfont8pkvgkxE') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CiscoSansBoldOblique';
+    src: url('../fonts/eot/ciscosansboldoblique-webfont.eot');
+	src: local('ò∫'),
+		 url('../fonts/eot/ciscosansboldoblique-webfont.eot?iefix') format('eot'),
+         url('../fonts/woff/ciscosansboldoblique-webfont.woff') format('woff'),
+         url('../fonts/ciscosansboldoblique-webfont.ttf') format('truetype'),
+         url('../fonts/svg/ciscosansboldoblique-webfont.svg#webfont6kp9saZw') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CiscoSansExtraLight';
+    src: url('../fonts/eot/ciscosansextralight-webfont.eot');
+	src: local('ò∫'),
+   		 url('../fonts/eot/ciscosansextralight-webfont.eot?iefix') format('eot'),
+         url('../fonts/woff/ciscosansextralight-webfont.woff') format('woff'),
+         url('../fonts/ciscosansextralight-webfont.ttf') format('truetype'),
+         url('../fonts/svg/ciscosansextralight-webfont.svg#webfontFLqfaivC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CiscoSansExtraLightOblique';
+    src: url('../fonts/eot/ciscosansextralightoblique-webfont.eot');
+	src: local('ò∫'),
+		 url('../fonts/eot/ciscosansextralightoblique-webfont.eot?iefix') format('eot'),
+         url('../fonts/woff/ciscosansextralightoblique-webfont.woff') format('woff'),
+         url('../fonts/ciscosansextralightoblique-webfont.ttf') format('truetype'),
+         url('../fonts/svg/ciscosansextralightoblique-webfont.svg#webfontzIqNoWPv') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CiscoSansHeavy';
+    src: url('../fonts/eot/ciscosansheavy-webfont.eot');
+	src: local('ò∫'),
+		 url('../fonts/eot/ciscosansheavy-webfont.eot?iefix') format('eot'),
+         url('../fonts/woff/ciscosansheavy-webfont.woff') format('woff'),
+         url('../fonts/ciscosansheavy-webfont.ttf') format('truetype'),
+         url('../fonts/svg/ciscosansheavy-webfont.svg#webfont2l378Jfz') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CiscoSansHeavyOblique';
+    src: url('../fonts/eot/ciscosansheavyoblique-webfont.eot');
+	src: local('ò∫'),
+		 url('../fonts/eot/ciscosansheavyoblique-webfont.eot?iefix') format('eot'),
+         url('../fonts/woff/ciscosansheavyoblique-webfont.woff') format('woff'),
+         url('../fonts/ciscosansheavyoblique-webfont.ttf') format('truetype'),
+         url('../fonts/svg/ciscosansheavyoblique-webfont.svg#webfontI8eDEnVB') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CiscoSansRegular';
+    src: url('../fonts/eot/ciscosansregular-webfont.eot');
+	src: local('ò∫'),
+    	 url('../fonts/eot/ciscosansregular-webfont.eot?iefix') format('eot'),
+         url('../fonts/woff/ciscosansregular-webfont.woff') format('woff'),
+         url('../fonts/ciscosansregular-webfont.ttf') format('truetype'),
+         url('../fonts/svg/ciscosansregular-webfont.svg#webfontzmIuSJha') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CiscoSansOblique';
+    src: url('../fonts/eot/ciscosansregularoblique-webfont.eot');
+	src: local('ò∫'),
+		 url('../fonts/eot/ciscosansregularoblique-webfont.eot?iefix') format('eot'),
+         url('../fonts/woff/ciscosansregularoblique-webfont.woff') format('woff'),
+         url('../fonts/ciscosansregularoblique-webfont.ttf') format('truetype'),
+         url('../fonts/svg/ciscosansregularoblique-webfont.svg#webfontP4FkZOni') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CiscoSansThin';
+    src: url('../fonts/eot/ciscosansthin-webfont.eot');
+	src: local('ò∫'),
+		 url('../fonts/eot/ciscosansthin-webfont.eot?iefix') format('eot'),
+         url('../fonts/woff/ciscosansthin-webfont.woff') format('woff'),
+         url('../fonts/ciscosansthin-webfont.ttf') format('truetype'),
+         url('../fonts/svg/ciscosansthin-webfont.svg#webfontYV2ijA8e') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'CiscoSansThinOblique';
+    src: url('../fonts/eot/ciscosansthinoblique-webfont.eot');
+	src: local('ò∫'),
+		 url('../fonts/eot/ciscosansthinoblique-webfont.eot?iefix') format('eot'),
+         url('../fonts/woff/ciscosansthinoblique-webfont.woff') format('woff'),
+         url('../fonts/ciscosansthinoblique-webfont.ttf') format('truetype'),
+         url('../fonts/svg/ciscosansthinoblique-webfont.svg#webfontgFNDkZCf') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+
+
+
+
+/* End fonts*/
+
+/* RJM Styles */
+#main, 
+footer {
+	width: 960px;
+	margin: 0 auto;
+}
+
+footer {
+	font-size: 11px;
+}
+
+#main,
+header {
+	margin: 0 auto;
+	overflow:hidden;	
+}
+/***** BEGIN HEADER *****/
+header {
+	width: 940px;
+	height: 62px;
+	margin: 0 auto 20px;
+	overflow: visible;
+	z-index: 10;
+	position: relative;
+}
+
+#homelink {
+	float: left;
+	margin: 30px 0 0 0;
+}
+
+#let-us-help {
+	position: absolute;
+	width: 150px;
+	bottom: 17px;
+	right: -3px;
+	margin: 0;
+}
+
+/*
+
+header #contact-us {
+	position: absolute;
+	top: 20px;
+	right: 0px;
+	background: url("../img/contact_us_button_sprite.png") no-repeat scroll
+		top right transparent;
+	width: 150px;
+	height: 38px;
+	text-indent: -9999px;
+	cursor:pointer;
+
+	display:none;
+	left:150px;
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:49px;
+}
+
+header #contact-us:hover {
+	background: url("../img/contact_us_button_sprite.png") no-repeat scroll
+		bottom left transparent;
+}
+
+*/
+/***** END HEADER *****/
+/***** BEGIN HERO *****/
+.brand-landing-hero {
+	width: 940px;
+	height: 334px;
+	position: relative;
+	margin: 0 auto 20px;
+}
+
+.brand-landing-hero .brand-landing-background {
+	position:absolute;
+	z-index: -1000;
+	top:0px;
+	left:0px;
+	width:940px;
+	height:334px;
+	z-index:0;
+	-moz-border-radius: 6px; /* FF1+ */
+	-webkit-border-radius: 6px; /* Saf3-4, iOS 1+, Android 1.5+ */
+	border-radius: 6px; /* Opera 10.5, IE9, Saf5, Chrome, FF4 */
+}
+.main-hero-content,
+.secondary-hero-content {
+	position: absolute;
+	
+}
+.main-hero-content {
+	display: none;
+	color: black;
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+	position: absolute;
+	top: 25px;
+	left: 27px;
+	width: 683px;
+	height:310px;
+}
+.main-hero-content h1 {
+		font-family: 'Arial', sans-serif;
+    font-weight: 100;
+    font-size: 35px;
+    line-height: 1.2em;
+    width: 400px;
+    margin:  0px 0px 22px 0px;
+}
+.main-hero-content p {
+	line-height: 1.3em;
+	font-size: 14px;
+	width: 450px;
+	font-weight: 100;
+	margin-top: -5px;
+}
+.main-hero-content em {
+	font-style: normal;
+	color: #f78f21;
+}
+.main-hero-content h1 em {
+    font-size: 39px;
+}
+.main-hero-content .main_footer{
+	position:absolute;
+	bottom:11px;
+	left:10px;
+}
+.main-hero-content .main_footer .main_footer_1{
+	width:100%;
+	position:relative;
+	left:65px;
+
+}
+
+.main-hero-content .main_footer .main_footer_2{
+	font-size:8px;
+	width:100%;
+	position:relative;
+	top:5px;
+	right:11px;
+}
+.button-orange{
+	text-shadow: 0px  0px 0px #000000;
+	background: url(../img/see_how_sprite.jpg) repeat-x;
+}
+
+.secondary-hero-content {
+	position: absolute;
+	right: 20px;
+	width: 190px;
+	top: 25px; 
+}
+.secondary-hero-content h2 {
+	color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-weight: 100;
+    font-size: 26px;
+    line-height: 1.2em;
+    width: 200px;
+}
+.secondary-hero-content p {
+	font-weight: normal;
+	line-height: 1.4em;
+	font-size: 12px;
+	width: 200px;
+	margin-top: 18px;
+}
+div.brand-landing-hero .button-1 {
+	position: relative;
+	font-size: 13px;
+	margin-top: 20px;
+}
+.main-hero-content .button-1 span{
+	font-family: 'Arial', sans-serif;
+	text-align:center;
+}
+.secondary-hero-content .button-2 img,.main-hero-content .button-1 img{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+.brand-landing-hero a.button-2 {
+	position: relative;
+	font-family: 'Arial', sans-serif;
+	font-weight: normal;
+	width: 140px;
+	margin-top: 40px;
+}
+/***** END HERO *****/
+/***** BEGIN CTA Global *****/
+.brand-landing-cta {
+	overflow:hidden;
+	margin: 0 auto 20px;
+	width: 940px;
+	color: #646464;
+}
+
+.brand-landing-cta h2 {
+	font-weight: 700;
+	font-family: 'Arial', sans-serif;
+	font-size: 16px;
+	margin-bottom: 11px;
+}
+
+.light-cta-col1 {
+	position:relative;
+	float:left;
+}
+
+.light-cta-col2 {
+	position:relative;
+	float:left;
+}
+
+/* MEDIUM CTA SECTIONS */
+
+.brand-landing-cta-4col {
+	width: 888px;
+	height: 188px;
+	padding: 20px 25px 30px;
+	margin: 0 auto 10px;
+}
+
+.medium-cta-col {
+	font-family: 'Arial', sans-serif;
+	color: #000;
+	float:left;
+	position:relative;
+	width: 220px;
+	overflow:hidden;
+	position:relative;
+	float:left;
+	margin-right: 20px;
+	border-bottom: 1px solid #e5e5e5;
+	-moz-border-radius: 0 0 6px 6px; /* FF1+ */
+	-webkit-border-radius: 0 0 6px 6px; /* Saf3-4, iOS 1+, Android 1.5+ */
+	border-radius: 0 0 6px 6px; /* Opera 10.5, IE9, Saf5, Chrome, FF4 */
+}
+
+.medium-cta-col4 {
+	margin-right: 0;
+}
+.cta-link {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.cta-vid-thumb {
+	position:absolute;
+	width: 194px;
+	height: 70px;
+}
+
+.cta-text-content {
+	padding: 0 30px 0 205px ;
+}
+
+.cta-text-content p {
+	/*width: 190px; */
+	margin: 0 0 30px;
+	font-size:11px;
+}
+
+.cta-link li a {
+	background: url(../img/arrow.png) left center no-repeat;
+	padding: 0 0 0 20px;
+	font-size:11px;
+}
+
+/* MEDIUM CTA CONTENT STYLES */
+
+.medium-cta-col .thumbnail {
+	display: block;
+	width: 220px;
+	height: 99px;
+	overflow: hidden;
+	-moz-border-radius: 6px 6px 0 0; /* FF1+ */
+	-webkit-border-radius: 6px 6px 0 0; /* Saf3-4, iOS 1+, Android 1.5+ */
+	border-radius: 6px 6px 0 0; /* Opera 10.5, IE9, Saf5, Chrome, FF4 */
+}
+
+.med-cta-text-content {
+	position: relative;
+	padding: 10px;
+	height: 190px;
+	font-size: 11px;
+	background: #f1f1f1; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjY1JSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRkZGQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #f1f1f1 0%, #f1f1f1 65%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f1f1f1), color-stop(65%,#f1f1f1), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f1f1f1 0%,#f1f1f1 65%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f1f1f1 0%,#f1f1f1 65%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f1f1f1 0%,#f1f1f1 65%,#dddddd 100%); /* IE10+ */
+	-pie-background: linear-gradient(top, #f1f1f1 0%,#f1f1f1 65%,#dddddd 100%); /* W3C */
+	background: linear-gradient(top, #f1f1f1 0%,#f1f1f1 65%,#dddddd 100%); /* W3C */
+	border: 1px solid #dcdcdc;
+	border-top: 2px solid #dcdcdc;
+	border-bottom: 1px solid #b4b4b4;
+	-moz-border-radius: 0 0 6px 6px; /* FF1+ */
+	-webkit-border-radius: 0 0 6px 6px; /* Saf3-4, iOS 1+, Android 1.5+ */
+	border-radius: 0 0 6px 6px; /* Opera 10.5, IE9, Saf5, Chrome, FF4 */
+}
+
+.med-cta-text-content p {
+	font-size:14px;
+	margin-bottom: 30px;
+}
+
+a.med-cta-link {
+	position: absolute;
+	bottom: 12px;
+	background: url(../img/arrow.png) left center no-repeat;
+	padding: 0 0 0 10px;
+}
+
+#socialmediaticker {
+	position: relative;
+	color: #000000;
+	font-size: 13px;
+	font-weight: bold;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+#socialmediaticker h2 {
+	display: block;
+	float: left;
+}
+#socialmediaticker ol {
+	float: left;
+	list-style: none;
+}
+#socialmediaticker ol li {
+	position: absolute;
+	top: 10px;	
+	left: 210px;	
+	margin-top: 0px;
+	font-size: 12px !important;
+	background: url(../img/ticker-icons.png) no-repeat -50px -50px;
+	line-height: 17px;
+}
+.brand-landing-social-dialog {
+	font-family: arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	color: #0b66b6;
+	float: left;
+	height: 23px;
+	width: 669px;
+	padding: 10px 20px 0 20px; 
+	border: 1px solid #ccc;
+	border-right: none;
+	-moz-border-radius: 6px 0 0 6px; /* FF1+ */
+	-webkit-border-radius: 6px 0 0 6px; /* Saf3-4, iOS 1+, Android 1.5+ */
+	border-radius: 6px 0 0 6px; /* Opera 10.5, IE9, Saf5, Chrome, FF4 */
+	background: #ececec;
+	margin: 0 0 0 10px;
+}
+.ie6 .brand-landing-social-dialog {
+	margin-left: 5px;
+}
+.brand-landing-social-dialog span {
+	color: #4a4a4a;
+}
+.brand-landing-social-dialog .next,
+.brand-landing-social-dialog .prev {
+	display: block;
+	float: left;
+	text-indent: -9999px;
+	width: 26px;
+	height: 18px;
+	background: url(../img/ticker-arrows.png) no-repeat;
+	line-height: 24px;
+	margin-top: -1px;
+}
+.brand-landing-social-dialog .prev {
+	margin-left: 17px;
+	background-position: -0px -0px;
+}
+.brand-landing-social-dialog .next {
+	margin-right: 0;
+	background-position: -28px -0px;
+}
+.brand-landing-social-join {
+	float: right;
+	margin-right: 10px;
+	background: url(../img/buttons/join-discussion-button.png) no-repeat top left;
+	height: 35px;
+	width: 230px;
+	display: inline-block;
+	text-indent: -9999px;
+}
+.brand-landing-social-ul {
+	float: right;
+	margin: 0px;
+	color: #000000;
+	list-style:none;
+	font-size: 13px;
+	font-weight: bold;
+	position:relative;
+}
+
+.brand-landing-social-ul li {
+	float: left;
+	padding: 0 0 0 8px;
+}
+.brand-landing-social-ul li.brand-landing-social-label {
+	font-size: 13px;
+	font-weight: bold;
+	padding-right:0px;
+}
+.social-icon {
+	display: inline-block;
+	text-indent: -9999px;
+	overflow:hidden;	
+	width: 17px;
+	height: 16px;	
+}
+
+.brand-landing-social a#twitter {
+	background: url(../img/social-icons.gif) 0 0 no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+.brand-landing-social a#facebook {
+	background: url(../img/social-icons.gif) -23px 0 no-repeat;
+}
+
+.brand-landing-social a#youtube {
+	background: url(../img/social-icons.gif) -48px 0 no-repeat;
+}
+
+.brand-landing-social a#rss {
+	background: url(../img/social-icons.gif) -72px 0 no-repeat;
+}
+
+.brand-landing-social a#twitter:hover {
+	background: url(../img/social-icons.gif) 0 -18px no-repeat;
+}
+
+.brand-landing-social a#facebook:hover {
+	background: url(../img/social-icons.gif) -23px -18px no-repeat;
+}
+
+.brand-landing-social a#youtube:hover {
+	background: url(../img/social-icons.gif) -48px -18px no-repeat;
+}
+
+.brand-landing-social a#rss:hover {
+	background: url(../img/social-icons.gif) -72px -18px no-repeat;
+}
+
+/***** END MEDIUM CTA SECTIONS *****/
+/***** BEGIN footer *****/
+.ffoot {
+	font-size: 11px;
+	position: relative;
+	background: #f2f2f2; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #f2f2f2 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f2f2f2 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f2f2f2 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f2f2f2 0%,#ffffff 100%); /* IE10+ */
+	-pie-background: linear-gradient(top, #f2f2f2 0%,#ffffff 100%); /* W3C */
+	background: linear-gradient(top, #f2f2f2 0%,#ffffff 100%); /* W3C */
+	-moz-border-radius: 6px 6px 0 0; /* FF1+ */
+	-webkit-border-radius: 6px 6px 0 0; /* Saf3-4, iOS 1+, Android 1.5+ */
+	border-radius: 6px 6px 0 0; /* Opera 10.5, IE9, Saf5, Chrome, FF4 */
+}
+
+.ffoot-col {
+	width: 218px;
+	float: left;
+	padding: 16px 0 10px 22px;
+	margin: 0;
+}
+.ffoot-block {
+	margin: 8px 0;
+}
+.ffoot h3, 
+.ffoot h3 a,
+.ffoot h3 a:visited {
+	color: black!important;
+	font-weight: normal;
+	font-size: 12px;
+	margin: 2px 0 4px;
+}
+.ffoot ul {
+	list-style: none;
+	margin: 2px 0 13px;
+}
+.ffoot li {
+	margin: 1px 0 5px;
+}
+.ffoot a:link,
+.ffoot a:visited {
+	color: #666;
+}
+.ffoot .ffoot-menucontainer {
+	display: none;
+	float: left;
+	position: absolute;
+	z-index: 10;
+}
+#home-footer {
+	margin: 15px 0;
+	padding: 10px 0 0 16px;
+	font-size: 11px;
+	line-height: 13px;
+	border-top: #EAEAEA 1px solid;
+}
+#home-footer ul {
+	list-style: none;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	position: relative;
+	height: 25px;
+}
+#home-footer ul li {
+	float: left;
+	display: block;
+	border-left: 1px solid #B4B4B4;
+	padding: 0 7px;
+	position: relative;
+	left: -2px;
+	line-height: 11px;
+}
+#home-footer a:hover,
+#home-footer a:active {
+	text-decoration: underline;
+}
+#home-footer a {
+	background-color: transparent;
+	text-decoration: none;
+}
+
+/***** END footer*****/
+/* LIGHT BOX STYLES */
+.t1m-lb {
+    background-color: #FFFFFF;
+    border: 1px solid #666666;
+    font-size: large;
+    height: auto;
+    left: 198px !important;
+    margin-left: 0;
+    min-width: 480px;
+    padding: 15px;
+    position: fixed;
+    text-align: center;
+    top: 108px;
+    display:none;
+}
+.t1m-lb-content {
+	display:block;
+    font-family: sans-serif;	
+    font-size:11px;
+    color:#666;
+   /* background: url(../img/modal-fixed.png) left top; */
+    padding:3px 9px;
+    height:432px;
+    width:720px;
+}
+* html .t1m-lb-content {
+	background:none;
+}
+.t1m-lb-content * {
+	font-family: sans-serif;
+}
+.t1m-lb-content h2 {
+    color: #336666;
+    font-size: 19px;
+    margin: 0 60px 10px 0;
+    text-align: left;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+/*.t1m-lb-content .lb-close*/ .lb-close {
+    font-size: small;
+    position: absolute;
+    right: 17px;
+    top: 7px;
+    z-index: 10000;
+    width:17px;
+    height:17px;
+}
+/*.t1m-lb-content*/ .lb-close a {
+    display:block;
+    color: #666666;
+    font-size: 99.1%;
+    outline: medium none;
+    text-decoration: none;
+    text-indent:-1000px;
+    background:url(../img/button-close.png) no-repeat top left;
+    overflow:hidden;
+    width:17px;
+    height:17px;    
+}
+.t1m-lb-content .lb-close a:hover {
+	text-decoration:underline;
+}
+.t1m-lb-content .flash-alt {
+	padding-top:0px;
+	text-align:center;
+
+}
+
+/*START cisco header */
+#cisco_header{
+	width:100%;
+	background: transparent url("http://www.cisco.com/web/fw/i/mb-hotspot.jpg");
+	background-repeat: repeat-x;
+	margin-bottom:20px;
+}
+#cisco_header #cisco_header_content{
+	width: 960px;
+	margin: auto;
+	position: relative;
+	height:70px;
+	display:block;
+}
+
+#cisco_header #cisco_header_logo{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 0;
+	background-repeat: no-repeat;
+	background-position: -4px -1650px;
+	height: 100%;
+	width:90px;
+	background-image: url("http://www.cisco.com/web/fw/i/mb-sprite.png");
+}
+#cisco_header #cisco_header_human_network{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 90px;
+	font-size: 0;
+	background-repeat: no-repeat;
+	background-image: url("../img/human_network.png");
+	height:100%;
+	width:80px;
+}
+#cisco_header li{
+	display:inline;
+	float:right;
+	margin-top:30px;
+	margin-right:10px;
+	
+}
+
+#cisco_header a, #cisco_header li{
+		color:white; 
+
+
+/* END Cisco Header */
+
+#DOMWindow{
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	behavior: url("/assets/prod/uc/cius/landing/t1m/css/PIE.htc");
+}
+#DOMWindow .csvid-container{
+	position:relative;
+	right:6px;
+}

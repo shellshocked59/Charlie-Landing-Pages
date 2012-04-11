@@ -1,0 +1,12 @@
+<smil>
+  <head>
+    <meta base="rtmp://cp46186.edgefcs.net/ondemand"/>
+  </head>
+  <body>
+    <switch>
+            <video src="mp4:videos/CloudVerse_low.f4v" system-bitrate="375000"/>     
+            <video src="mp4:videos/CloudVerse_med.f4v" system-bitrate="700000"/>     
+            <video src="mp4:videos/CloudVerse_high.f4v" system-bitrate="1200000"/>
+    </switch>
+  </body>
+</smil>
